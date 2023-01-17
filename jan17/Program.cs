@@ -6,10 +6,18 @@ namespace jan17
     {
         static void GuessingGame()
         {
-            Random rando = new Random();
-            int randomNumber = rando.Next(0, 100);
+           
             Console.WriteLine("Welcome to the guessing Game");
-       
+            Console.WriteLine("Enter start value of the range of numbers: ");
+            string userInputForStartRange = Console.ReadLine();
+            int startRange = Int32.Parse(userInputForStartRange);
+
+            Console.WriteLine("Enter end value of the range of numbers: ");
+            string userInputForEndRange = Console.ReadLine();
+            int endRange= Int32.Parse(userInputForEndRange);
+            Random rando = new Random();
+            
+            int randomNumber = rando.Next(startRange, endRange);
             string userInput;
             int userNumber = 0;
             int counter = 0;
@@ -37,7 +45,7 @@ namespace jan17
         static void Main(string[] args)
         {
             GuessingGame();
-            //test
+            
         }
     }
 }
