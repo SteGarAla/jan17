@@ -12,7 +12,7 @@ namespace jan17
        
             string userInput;
             int userNumber = 0;
-           
+            int counter = 0;
  
            while(userNumber != randomNumber)
             {
@@ -29,8 +29,10 @@ namespace jan17
                 {
                     Console.WriteLine($"{userNumber} is smaller than random number \n");
                 }
+                counter++;
             }
-            Console.WriteLine("You guessed the number !!!");
+            Console.WriteLine("You guessed the number!!!");
+            Console.WriteLine($"It took you {counter} amount of tries :O ");
         }
         static void Main(string[] args)
         {
